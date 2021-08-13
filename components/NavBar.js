@@ -22,7 +22,7 @@ const NavBar = () => {
   return (
     <div
       className={`flex justify-center sm:items-center sm:justify-around sticky top-0 z-50 transition duration-700 ease-in-out bg-black ${
-        navBar && "bg-white"
+        navBar && " bg-gray-100 shadow-2xl"
       }`}
     >
       <div>
@@ -49,23 +49,25 @@ const NavBar = () => {
         </div>
       </div>
 
-      <div className="items-center space-x-5 hidden sm:inline-flex">
-        <p
-          className={`hover:bg-gray-300 cursor-pointer hover:text-black text-white rounded-full px-4 py-2 ${
-            navBar && "border border-gray-300 shadow-lg text-black"
-          }`}
-        >
-          About us
-        </p>
-        <p
-          className={`hover:bg-gray-300 hover:text-black cursor-pointer text-white rounded-full px-4 py-2 ${
-            navBar &&
-            "border border-gray-300 shadow-lg text-black hover:bg-transparents"
-          }`}
-        >
-          Search Books
-        </p>
-      </div>
+      {navBar && (
+        <div className="items-center space-x-5 hidden sm:inline-flex">
+          <p
+            className={`hover:bg-gray-300 cursor-pointer hover:text-black text-white rounded-full px-4 py-2 ${
+              navBar && "border border-gray-300 shadow-lg text-black"
+            }`}
+          >
+            About us
+          </p>
+          <p
+            className={`hover:bg-gray-300 hover:text-black cursor-pointer text-white rounded-full px-4 py-2 ${
+              navBar &&
+              "border border-gray-300 shadow-lg text-black hover:bg-transparents"
+            }`}
+          >
+            Search Books
+          </p>
+        </div>
+      )}
     </div>
   );
 };

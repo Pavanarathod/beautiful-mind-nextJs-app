@@ -4,4 +4,13 @@
   .button {
     @apply px-6 py-2 bg-[#008000] hover:scale-105 text-white transition transform duration-100 ease-out rounded-full cursor-pointer hover:shadow-lg;
   }
+  .buttonTwo {
+    @apply px-6 py-2 bg-gray-900 hover:scale-105 text-white transition transform duration-100 ease-out rounded-full cursor-pointer hover:shadow-lg;
+  }
+  .booklist__container {
+    @apply relative flex flex-col p-3 shadow-md hover:border hover:border-gray-300 hover:rounded-lg hover:shadow-xl hover:scale-105 transition transform duration-300 ease-in;
+  }
+  .boollist__container__button {
+    @apply bg-gray-900 text-white rounded-lg w-full shadow-2xl py-2 px-14 mt-3 transition duration-700 ease-in-out lg:hidden group-hover:block;
+  }
 }

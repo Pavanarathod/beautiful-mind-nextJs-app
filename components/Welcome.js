@@ -13,13 +13,13 @@ const Welcome = ({ image, header, info, buttonText, right }) => {
       <div
         className={
           right
-            ? "absolute space-y-4 right-60 top-16 text-right"
+            ? "absolute space-y-4 lg:left-1/3 top-14 md:left-48 lg:top-20 text-center"
             : "absolute top-14 lg:left-56 lg:top-16 space-y-4"
         }
       >
         <h1 className="text-3xl font-semibold">{header}</h1>
         <p className="text-lg font-medium">{info}</p>
-        <button className="button">{buttonText}</button>
+        <button className={right ? "buttonTwo" : "button"}>{buttonText}</button>
       </div>
     </div>
   );
