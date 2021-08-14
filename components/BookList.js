@@ -28,7 +28,9 @@ const BookList = ({ image, title, authors, id }) => {
         <h1 className="truncate text-center text-2xl font-thin group-hover:font-extralight">
           {title}
         </h1>
-        <p className="text-center lg:group-hover:hidden truncate">{persons}</p>
+        <p className="text-center lg:group-hover:hidden font-thin truncate">
+          {persons}
+        </p>
       </div>
 
       <div className="lg:absolute md:left-10 lg:left-20 lg:top-40">
