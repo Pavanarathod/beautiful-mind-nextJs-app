@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 
-const Welcome = ({ image, header, info, buttonText, right }) => {
+const Welcome = ({ image, header, info, buttonText, right, showButton }) => {
+  const router = useRouter();
   return (
     <div className="relative h-96 mt-5 p-5">
       <Image
@@ -19,7 +21,14 @@ const Welcome = ({ image, header, info, buttonText, right }) => {
       >
         <h1 className="text-3xl font-semibold">{header}</h1>
         <p className="text-lg font-medium">{info}</p>
-        <button className={right ? "buttonTwo" : "button"}>{buttonText}</button>
+        {showButton && (
+          <button
+            onClick={() => router.push("/search")}
+            className={right ? "buttonTwo" : "button"}
+          >
+            {buttonText}
+          </button>
+        )}
       </div>
     </div>
   );

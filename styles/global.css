@@ -13,4 +13,16 @@
   .boollist__container__button {
     @apply bg-gray-900 text-white rounded-lg w-full shadow-2xl py-2 px-14 mt-3 transition duration-700 ease-in-out lg:hidden group-hover:block;
   }
+  .search__header {
+    @apply p-3 sm:flex sm:items-center sm:space-x-4 sticky top-0 z-50 bg-white;
+  }
+  .search__input {
+    @apply py-2 p-3 border sm:transition sm:duration-700 sm:w-[69%] sm:focus:w-[100%] border-gray-400 rounded-full focus:outline-none;
+  }
+  .card__container {
+    @apply space-y-3 mt-5 p-5 sm:space-y-0 sm:grid md:grid-cols-3 lg:grid-cols-4 gap-3;
+  }
+  .search__icon {
+    @apply ml-4 h-8 p-2 rounded-full cursor-pointer bg-gray-900 text-white;
+  }
 }

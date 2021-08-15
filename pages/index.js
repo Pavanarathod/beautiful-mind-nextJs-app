@@ -21,6 +21,7 @@ export default function Home({ trending, science }) {
             header="World's No:1 Online Book Shop"
             info="Find you'r favourite Book"
             buttonText="Search Books"
+            showButton
           />
         </section>
 
@@ -42,6 +43,7 @@ export default function Home({ trending, science }) {
         </section>
         <section className="mt-16">
           <Welcome
+            showButton
             image="/images/Students.jpg"
             header="Top Books for Students"
             info="Find All Books Related to School and Collage"
@@ -72,11 +74,11 @@ export default function Home({ trending, science }) {
 
 export const getStaticProps = async () => {
   const bookList = await fetch(
-    `https://www.googleapis.com/books/v1/volumes?q=planet+inauthor:keyes&key=${process.env.GOOGLE_KEY}`
+    `https://www.googleapis.com/books/v1/volumes?q=crime+inauthor:keyes&key=${process.env.NEXT_PUBLIC_GOOGLE_KEY}`
   ).then((res) => res.json());
 
   const bookListTwo = await fetch(
-    `https://www.googleapis.com/books/v1/volumes?q=Astronomy+inauthor:keyes&key=${process.env.GOOGLE_KEY}`
+    `https://www.googleapis.com/books/v1/volumes?q=Astronomy+inauthor:keyes&key=${process.env.NEXT_PUBLIC_GOOGLE_KEY}`
   ).then((res) => res.json());
 
   const trending = bookList.items;

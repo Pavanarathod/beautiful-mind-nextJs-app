@@ -1,9 +1,10 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import Link from "next/link";
 
 const NavBar = () => {
   const [navBar, handleNavBar] = useState(false);
+  const router = useRouter();
 
   const handleChange = () => {
     if (window.scrollY > 100) {
