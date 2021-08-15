@@ -3,12 +3,12 @@ import Image from "next/image";
 import { SearchIcon } from "@heroicons/react/outline";
 import BookList from "../components/BookList";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useRef } from "react";
 import Head from "next/head";
 
 const Search = ({ searches }) => {
   const router = useRouter();
-  const [searchInupt, setSearchInut] = useState();
+  const inputRef = useRef();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -16,7 +16,7 @@ const Search = ({ searches }) => {
     router.push({
       pathname: "/results",
       query: {
-        term: searchInupt,
+        term: inputRef.current.value,
       },
     });
   };
@@ -43,8 +43,7 @@ const Search = ({ searches }) => {
             <form className="flex items-center" onSubmit={onSubmit}>
               <input
                 type="text"
-                value={searchInupt}
-                onChange={(e) => setSearchInut(e.target.value)}
+                ref={inputRef}
                 placeholder="Search"
                 className="search__input"
               />

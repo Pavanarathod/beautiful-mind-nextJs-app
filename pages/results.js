@@ -3,7 +3,6 @@ import Head from "next/head";
 
 const Results = ({ books }) => {
   const router = useRouter();
-  console.log(books);
   return (
     <div>
       <Head>
