@@ -74,11 +74,11 @@ export default function Home({ trending, science }) {
 
 export const getStaticProps = async () => {
   const bookList = await fetch(
-    `https://www.googleapis.com/books/v1/volumes?q=crime+inauthor:keyes&key=${process.env.NEXT_PUBLIC_GOOGLE_KEY}`
+    `https://www.googleapis.com/books/v1/volumes?q=crime+inauthor:keyes&key=${process.env.GOOGLE_KEY}`
   ).then((res) => res.json());
 
   const bookListTwo = await fetch(
-    `https://www.googleapis.com/books/v1/volumes?q=Astronomy+inauthor:keyes&key=${process.env.NEXT_PUBLIC_GOOGLE_KEY}`
+    `https://www.googleapis.com/books/v1/volumes?q=Astronomy+inauthor:keyes&key=${process.env.GOOGLE_KEY}`
   ).then((res) => res.json());
 
   const trending = bookList.items;

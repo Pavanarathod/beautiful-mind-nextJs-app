@@ -81,7 +81,7 @@ export default Search;
 
 export const getStaticProps = async () => {
   const bookList = await fetch(
-    `https://www.googleapis.com/books/v1/volumes?q=romance+inauthor:keyes&key=${process.env.NEXT_PUBLIC_GOOGLE_KEY}`
+    `https://www.googleapis.com/books/v1/volumes?q=romance+inauthor:keyes&key=${process.env.GOOGLE_KEY}`
   ).then((res) => res.json());
 
   const searches = bookList.items;
